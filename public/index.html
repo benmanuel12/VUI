@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Speech API Project</title>
+    <script type="module" src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Web Speech API Project</h1>
+    <h4 id="echo">What the API thinks you said appears here</h4>
+    <h4 id="response">Log messages here</h4>
+    <input type="file" id="file-selector" multiple>
+    <button id="trigger">Click me!</button>
+    <h4>How to use</h4>
+    <p>To search one file Select the file with the file selector Required regex /(please )?(do (a )?)?(search|look) for (([\w|\s])+)/ or /(please )?find (\w+)( in (\w+))?/ If using second regex, omit the optional ( in (\w+))? at the end to ensure single
+        file search
+    </p>
+    <p>
+        To search multiple files Select the files with the file selector Required regex /(please )?(do (a )?)?(search|look) for (([\w|\s])+)/ or /(please )?find (\w+)( in (\w+))?/
+    </p>
+    <p>All files must follow the format below # Title then the file must have either regular text ### or headings this is all the code will pick up
+    </p>
+</body>
+
+</html>
