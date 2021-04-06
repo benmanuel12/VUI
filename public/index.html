@@ -16,14 +16,78 @@
     <h4 id="response">Log messages here</h4>
     <input type="file" id="file-selector" multiple>
     <button id="trigger">Click me!</button>
-    <h4>How to use</h4>
+    <h3>How to use (Please remember to scroll down, the instructions are quite long)</h3>
     <p>
         This program takes one or more text files with basic Markdown formatting and a voice command for what word or phrase to search for inside the file or files
         <br> It then returns the results of the search
     </p>
-    <h5>Accepted commands</h5>
-    <h5>Valid file structure and formatting</h5>
-    <h5>How the program works</h5>
+    <h4>Accepted commands</h4>
+    <h5>File Search</h5>
+    <ul>
+        <li>please do a search for <i>word/phrase</i></li>
+        <li>do a search for <i>word/phrase</i></li>
+        <li>do search for <i>word/phrase</i></li>
+        <li>search for <i>word/phrase</i></li>
+        <li>please do a look for <i>word/phrase</i></li>
+        <li>do a look for <i>word/phrase</i></li>
+        <li>do look for <i>word/phrase</i></li>
+        <li>look for <i>word/phrase</i></li>
+    </ul>
+    For the next list of commands, when a file name is prompted, it is in fact entirely ignored by the program
+    <ul>
+        <li>please find <i>word/phrase</i> in <i>file name</i></li>
+        <li>find <i>word/phrase</i> in <i>file name</i></li>
+        <li>please find <i>word/phrase</i></li>
+        <li>find <i>word/phrase</i></li>
+    </ul>
+    <h5>Google Search</h5>
+    <ul>
+        <li>research <i>word/phrase</i></li>
+    </ul>
+    <h5>Git initialisation</h5>
+    <ul>
+        <li>initialise repository in <i>location</i></li>
+        <li>init repository in <i>location</i></li>
+        <li>initialise repo in <i>location</i></li>
+        <li>init repo in <i>location</i></li>
+        <li>initialise repository</li>
+        <li>init repository</li>
+        <li>initialise repo</li>
+        <li>init repo</li>
+    </ul>
+    <h4>Valid file structure and formatting</h4>
+    <p>
+        All files must have the .txt file extension <br> If you want the files to be indexed when searching multiple files, one and only one line of the file must begin with '#' followed by your title<br> This does not have to be at the top of the page
+        but that makes the most sense<br> All headings must be prefixed with '###'<br> The rest of the file may be written in any way you like as long as you are aware that '##', '####', '#####' and '######' (the markdown symbols for Headings 2, 4, 5
+        and 6) are not supported and may cause bugs<br> If you intend to be able to search for and access text not prefixed by '#' or '###', it must at least be in a section headed by a '###' heading<br>
+        <br><br> For example<br> # How to write a good File<br> ### Headings<br> Headings must be prefixed by 3 hashtags, no more, no less
+        <br>
+        <br> ### More Markdown<br>
+        <br> Other markdown can be used such as
+        <br> - bullet points<br>
+        <br> > quotes
+        <br>
+        <br> ```js
+        <br> console.log("Even code")<br> ```
+        <br>
+        <br> but the program won't pick it up
+        <br>
+    </p>
+    <h4>How the program works</h4>
+    <p>For commands not related to file search, the user must select a file anyway as there is no way for the program to know you don't want to do a file search before you do one.</p>
+    <h5>One file</h5>
+    <p>
+        The user must use the file selector to select one compatible file then press the button and speak an accepted command specifying the word or phrase to find<br> The program will then search the file given for any h3 headings (with ###) that contain
+        that word or phrase, speak out all options with numbers next to them then prompt the user to select a number that corresponds to a option to proceed All text from the beginning of the selected option's ### to right before the next option's ###
+        will now be searched for the given word or phrase in case the user wants a specific line that doesn't have ### on it <br> Again, the options are numbered and the user is prompted to select one by number. The program will then read out the option
+        selected
+    </p>
+    <h5>Multiple file</h5>
+    <p>
+        The user must use the file selector to select more than one compatible file then press the button and speak an accepted command specifying the word or phrase to find within the title of the given files (title marked with #)<br> The program will
+        then search the files given for any h1 headings (with #) that contain that word or phrase, speak out all options with numbers next to them then prompt the user to select a number that corresponds to a option to proceed<br> The program will then
+        proceed same as above for one file, searching the selected file for ### headings with the given phrase and so on down the chain
+    </p>
 </body>
 
 </html>
