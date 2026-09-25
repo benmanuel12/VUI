@@ -9,8 +9,8 @@ JavaScript, Node.js
 ## Current Features
 - Indexes files and tracks h1 and h3 markdown tags
 - Allows user to search for tracked tags by voice command
-  -  Please do a search/look for <word>
-  -  Please find <word> in <other word>
+  -  Please do a search/look for "word"
+  -  Please find "word" in "other word"
 - Functioned as a handsfree way to search through notes in markdown format
  
 # Planned but not implemented
